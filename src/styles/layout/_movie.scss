@@ -1,0 +1,84 @@
+.movie {
+    color: $white-color;
+    background-color: $movie-bg-color;
+    box-shadow: 3px 3px 5px rgba($color: #000000, $alpha: 0.1);
+    border-radius: 0.3125rem;
+    overflow: hidden;
+    position: relative;
+
+    img {
+        min-height: 375px;
+        background-color: $movie-bg-color;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        object-fit: cover;
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+
+        h3 {
+            margin: 0;
+        }
+    }
+
+    &__average {
+        padding: 0.5rem;
+        font-weight: bold;
+        border-radius: 5px;
+        background-color: $bg-color;
+
+        &-red {
+            color: #ff6262;
+        }
+
+        &-orange {
+            color: #ffa162;
+        }
+
+        &-green {
+            color: #61cc61;
+        }
+    }
+
+    &__overview {
+        padding: 1rem;
+        max-height: 25rem;
+        color: $bg-color;
+        background-color: $white-color;
+        position: absolute;
+        overflow: auto;
+        bottom: 0;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+        left: 0.01rem;
+        right: 0.01rem;
+        transform: translateY((100%));
+        transition: 0.4s ease-in-out;
+
+        h4 {
+            margin: 0 0 0.5rem;
+        }
+
+        p {
+            margin: 0 0 1rem;
+            line-height: 1.8rem;
+            letter-spacing: 0.01rem;
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+
+        .movie {
+            &__overview {
+                box-shadow: 0 0 1rem rgba($color: #000000, $alpha: 0.5);
+                transform: translateX(0);
+            }
+        }
+    }
+}
