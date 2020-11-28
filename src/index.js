@@ -5,6 +5,8 @@ import MoviesContextProvider from './components/contexts/MoviesContext';
 
 import App from './App';
 
+import './styles/main.scss';
+
 ReactDOM.render(
     <React.StrictMode>
         <MoviesContextProvider>
