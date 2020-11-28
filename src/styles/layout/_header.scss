@@ -1,0 +1,21 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: $movie-bg-color;
+    color: $white-color;
+
+    &__title {
+        margin: 0;
+    }
+
+    &__search {
+        padding: 0.5rem 1.5rem;
+        font-size: 1.2rem;
+        color: $white-color;
+        background-color: transparent;
+        border: 2px solid $bg-color;
+        border-radius: 3.125rem;
+    }
+}
